@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Peeche ka halka noor. Bahut halka rakha hai (alpha kam) —
+  warna text padhne me dikkat hoti hai.
+-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:type="radial"
+        android:gradientRadius="70%p"
+        android:centerX="0.5"
+        android:centerY="0.42"
+        android:startColor="#141C3A"
+        android:centerColor="#0A0F1F"
+        android:endColor="#070B14" />
+</shape>

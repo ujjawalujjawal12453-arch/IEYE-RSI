@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/head_bg"
+        android:padding="14dp">
+
+        <TextView
+            android:id="@+id/back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:text="←"
+            android:textSize="22sp"
+            android:gravity="center"
+            android:textColor="@color/txt"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.06"
+            android:textColor="@color/txt"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="18dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView style="@style/Lbl" android:text="🧠 AI — dimaag" />
+
+            <!--
+              🔒 v4.5 — API KEYS AB TAALE ME
+
+              User ne kaha: "jab bhi wo aata hai na andar to wo
+              kisi bhi API vagaira ko change nahi kar sakta aur
+              na hi dekh sakta hai"
+
+              Isliye poora AI section neeche `apiBox` me hai aur
+              default me GONE hai. Owner password (2244) daalne
+              par hi khulta hai.
+            -->
+            <TextView
+                android:id="@+id/apiLock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔒  API keys taale me hain\nOwner password daal kar kholiye"
+                android:textSize="13sp"
+                android:gravity="center"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/dim"
+                android:background="@drawable/input_bg"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/apiUnlock"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="🔓  KHOLO"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.12"
+                android:gravity="center"
+                android:textColor="@color/cyan"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="6dp" />
+
+            <LinearLayout
+                android:id="@+id/apiBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView style="@style/Hint"
+                android:text="Ye keys pehle se bhari hui hain. Apni daalni ho to badal dijiye. Sab ENCRYPTED store hoti hain." />
+
+            <TextView style="@style/Lbl2" android:text="Groq key" />
+            <EditText android:id="@+id/groq" style="@style/Fld"
+                android:hint="gsk_..." tools:ignore="Autofill" />
+
+            <TextView style="@style/Lbl2"
+                android:text="Cloudflare Account ID" />
+            <EditText android:id="@+id/cfAcc" style="@style/Fld"
+                android:hint="32 character" tools:ignore="Autofill" />
+
+            <TextView style="@style/Lbl2"
+                android:text="Cloudflare Token" />
+            <EditText android:id="@+id/cfTok" style="@style/Fld"
+                android:hint="cfut_..." tools:ignore="Autofill" />
+
+            <TextView style="@style/Lbl2" android:text="Sarvam key" />
+            <EditText android:id="@+id/sarvam" style="@style/Fld"
+                android:hint="sk_..." tools:ignore="Autofill" />
+
+            </LinearLayout>
+            <!-- 🔒 apiBox yahan khatam -->
+
+            <View style="@style/Sep" />
+
+            <TextView style="@style/Lbl" android:text="🔊 Awaaz" />
+
+            <Switch
+                android:id="@+id/sarvamVoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sarvam ki Indian awaaz use karo"
+                android:textColor="@color/dim"
+                android:textSize="14sp"
+                android:layout_marginTop="14dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+            <TextView style="@style/Hint"
+                android:text="Band karoge to Android ki apni awaaz chalegi — offline bhi kaam karti hai" />
+
+            <View style="@style/Sep" />
+
+            <TextView style="@style/Lbl"
+                android:text="🎙 ElevenLabs — sabse asli awaaz" />
+
+            <!-- 🔒 v4.5 — ye bhi API hai, isliye taale me -->
+            <LinearLayout
+                android:id="@+id/apiBox2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <TextView style="@style/Lbl2" android:text="API key" />
+            <EditText android:id="@+id/eleven" style="@style/Fld"
+                android:hint="sk_..." tools:ignore="Autofill" />
+
+            <TextView style="@style/Lbl2"
+                android:text="Voice ID (khali = default awaaz)" />
+            <EditText android:id="@+id/elevenVoice" style="@style/Fld"
+                android:hint="21m00Tcm4TlvDq8ikWAM"
+                tools:ignore="Autofill" />
+
+            <Switch
+                android:id="@+id/elevenOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ElevenLabs ki awaaz use karo"
+                android:textColor="@color/dim"
+                android:textSize="14sp"
+                android:layout_marginTop="14dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+            <TextView style="@style/Hint"
+                android:text="elevenlabs.io se free key milti hai (10,000 akshar/mahina). Apni awaaz clone karke uska Voice ID yahan daal sakte ho — phir IEYE RIS aapki hi awaaz me bolega." />
+
+            </LinearLayout>
+            <!-- 🔒 apiBox2 khatam -->
+
+            <TextView
+                android:id="@+id/eleven2Lock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔒 Key taale me hai — upar 🔓 KHOLO dabaiye"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textColor="@color/dim3"
+                android:paddingTop="12dp"
+                android:paddingBottom="4dp" />
+
+            <TextView
+                android:id="@+id/elevenTest"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🔊  Awaaz sun kar dekho"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/cyan"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="10dp" />
+
+            <View style="@style/Sep" />
+
+            <TextView style="@style/Lbl"
+                android:text="🎙 Meri awaaz pehchano" />
+
+            <TextView
+                android:id="@+id/vidStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Abhi setup nahi hua"
+                android:textSize="13sp"
+                android:textColor="@color/dim2"
+                android:layout_marginTop="4dp" />
+
+            <Switch
+                android:id="@+id/vidOn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Awaaz check karo"
+                android:textColor="@color/dim"
+                android:textSize="14sp"
+                android:layout_marginTop="12dp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView style="@style/Lbl2"
+                android:text="Kitna kada (zyada = sakht)" />
+            <SeekBar
+                android:id="@+id/vidStrict"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="100"
+                android:progress="55"
+                android:layout_marginTop="4dp" />
+
+            <TextView
+                android:id="@+id/vidEnroll"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="🎤  Awaaz record karo"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/cyan"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="12dp" />
+
+            <TextView
+                android:id="@+id/vidTest"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="✓  Test karo"
+                android:textSize="13.5sp"
+                android:gravity="center"
+                android:textColor="@color/dim"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/vidDelete"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="🗑  Awaaz profile mitao"
+                android:textSize="13.5sp"
+                android:gravity="center"
+                android:textColor="@color/dim2"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="8dp" />
+
+            <TextView style="@style/Hint"
+                android:text="⚠️ SAAF BAAT — ye TAALA NAHI hai. Aapki awaaz aur kisi anjaan aadmi ki awaaz me farak kar leta hai, par milti-julti awaaz ya recording se koi ghus sakta hai. Zaroori cheezon ka taala isko mat banana." />
+
+            <View style="@style/Sep" />
+
+            <TextView style="@style/Lbl" android:text="👂 Wake word" />
+            <TextView style="@style/Lbl2"
+                android:text="Kis naam se bulaoge" />
+            <!-- ⏳ v3.0 — NAKHRE (kitna sabr) -->
+            <View style="@style/Sep" />
+            <TextView style="@style/Lbl" android:text="⏳ Nakhre — kitna sabr" />
+            <TextView
+                android:id="@+id/patLabel"
+                style="@style/Hint"
+                android:text="Normal (2.2s)" />
+            <TextView style="@style/Hint"
+                android:text="Aap bolte-bolte ruk jayein to main itni der intezaar karunga. Zyada rakhenge to poori baat sun kar hi kaam karunga." />
+            <SeekBar
+                android:id="@+id/patBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="3"
+                android:progress="1"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="14dp" />
+
+            <!-- 🔍 v3.0 — PHONE DOBARA SCAN -->
+            <View style="@style/Sep" />
+            <TextView style="@style/Lbl" android:text="🔍 Phone ka scan" />
+            <TextView
+                android:id="@+id/scanInfo"
+                style="@style/Hint"
+                android:text="Abhi tak scan nahi hua" />
+            <TextView
+                android:id="@+id/rescan"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:text="🔍  Phone dobara scan karo"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/txt"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="14dp" />
+
+            <EditText android:id="@+id/wakeWord" style="@style/Fld"
+                android:hint="IEYE RIS" tools:ignore="Autofill" />
+            <TextView style="@style/Hint"
+                android:text="⚠️ Wake word ON rakhne se battery zyada khatam hoti hai aur notification hamesha dikhega — Android ka niyam hai." />
+
+            <TextView
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Save karo"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/txt"
+                android:background="@drawable/btn_send"
+                android:layout_marginTop="26dp" />
+
+            <TextView
+                android:id="@+id/diag"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="🩺  AI Jaanch karo"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="@color/cyan"
+                android:background="@drawable/input_bg"
+                android:layout_marginTop="12dp" />
+
+            <TextView style="@style/Hint"
+                android:text="Shak ho ki AI kaam nahi kar rahi? Ye dabao — har model ko sach me poochha jayega aur natija samne aayega." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RAVAN X HOSTING TEAM\nDeveloper: Ujjawal X Official\n@UjjawalXsarkar"
+                android:textSize="11sp"
+                android:gravity="center"
+                android:textColor="@color/dim3"
+                android:lineSpacingExtra="3dp"
+                android:layout_marginTop="28dp"
+                android:layout_marginBottom="20dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

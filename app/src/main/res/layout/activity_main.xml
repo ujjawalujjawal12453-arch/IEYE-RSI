@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ═══════════════════════════════════════════════════════
+    IEYE RIS  v3.0  —  SIRF EK CIRCLE
+  ═══════════════════════════════════════════════════════
+
+  User ne saaf kaha:
+    "ab sirf ek circle aaega uske andar ek animation chalega"
+    "Ham chat vagaira nahin karenge, Ham sidha direct bolenge"
+    "Mike wala hata dena, ab sirf ek hi"
+
+  Isliye:
+    ✗ Chat bubbles HATA DIYE
+    ✗ Text likhne wala box HATA DIYA
+    ✗ 🎤 mic button HATA DIYA
+    ✗ ➤ send button HATA DIYA
+    ✓ Sirf beech me ek bada IRIS circle
+    ✓ Neeche ek line — jo bola/ho raha hai
+    ✓ Upar chhote control (settings, eyes, bubble)
+
+  ⚠️ Chat ka data ab bhi Memory me save hota hai (AI ko context
+     chahiye), bas SCREEN pe nahi dikhta. Purani baat dekhni ho
+     to Settings me "Baat-cheet" me mil jayegi.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fitsSystemWindows="true">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/aura_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- ═══════════ UPAR KA PATLA BAR ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="18dp"
+            android:paddingEnd="8dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="6dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="IEYE RIS"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.26"
+                    android:textColor="@color/txt" />
+
+                <TextView
+                    android:id="@+id/mutedTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="9sp"
+                    android:letterSpacing="0.10"
+                    android:textColor="@color/pink"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/bubble"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:text="🫧"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:alpha="0.3"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <TextView
+                android:id="@+id/eyes"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:text="👁"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:alpha="0.3"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <Switch
+                android:id="@+id/wakeSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="👂"
+                android:textSize="13sp"
+                android:textColor="@color/dim"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/settings"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:text="⚙"
+                android:textSize="17sp"
+                android:gravity="center"
+                android:textColor="@color/dim"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+        </LinearLayout>
+
+        <!--
+          ⏱ v4.5 — LICENSE TIMER, SABSE UPAR
+
+          User ne kaha: "jab bhi koi login vagaira karta hai na
+          SABSE UPAR timer chalu ho jaye, real time ka timer...
+          timer chahe kuch bhi ho, timer to chalu hoga"
+
+          Har 1 second badalta hai. Rang khud badalta hai:
+            hara  = theek
+            peela = 3 din se kam
+            laal  = 1 din se kam
+        -->
+        <TextView
+            android:id="@+id/licTimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.14"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:textColor="@color/neon"
+            android:background="@drawable/tag_bg"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="4dp"
+            android:visibility="gone" />
+
+        <!-- ═══════════ 👁 SIRF EK CIRCLE ═══════════ -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.ravanx.ieyeris.CoreView
+                android:id="@+id/core"
+                android:layout_width="300dp"
+                android:layout_height="300dp" />
+
+            <!--
+              📊 AGENT ACTIVITY — spec ka live panel
+              Listening → Understanding → Planning → Acting →
+              Verifying → Completed
+            -->
+            <TextView
+                android:id="@+id/activity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="9sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.22"
+                android:gravity="center"
+                android:textColor="@color/neon"
+                android:background="@drawable/tag_bg"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="18dp"
+                android:visibility="gone" />
+
+            <!-- jo bol rahe ho, ya jo ho raha hai -->
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DABAO AUR BOLO"
+                android:textSize="13sp"
+                android:letterSpacing="0.06"
+                android:gravity="center"
+                android:textColor="@color/dim"
+                android:layout_marginTop="30dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:minLines="2"
+                android:maxLines="5" />
+        </LinearLayout>
+
+        <!--
+          🛑 EMERGENCY STOP — spec: "must always be accessible"
+
+          ⚠️ Ye HAMESHA dikhta hai, chahe kuch chal raha ho ya na
+             ho. Spec me saaf likha hai. Agar sirf kaam ke waqt
+             dikhta to user use dhoondh nahi paata jab sabse
+             zyada zarurat hoti.
+        -->
+        <TextView
+            android:id="@+id/stopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="🛑  IEYE RIS STOP"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.14"
+            android:gravity="center"
+            android:textColor="#FFE4E4"
+            android:background="@drawable/btn_stop"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="26dp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- ═══════════ NEECHE KI LINE ═══════════ -->
+        <TextView
+            android:id="@+id/hint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="INTELLIGENT EYES · RESPONSE · SYSTEM"
+            android:textSize="8sp"
+            android:letterSpacing="0.16"
+            android:gravity="center"
+            android:textColor="@color/dim3"
+            android:paddingBottom="22dp" />
+    </LinearLayout>
+</FrameLayout>

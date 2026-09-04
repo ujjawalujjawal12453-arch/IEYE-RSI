@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.IeyeRis"
+        parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorPrimaryVariant">@color/purple2</item>
+        <item name="colorOnPrimary">@color/txt</item>
+        <item name="colorSecondary">@color/cyan</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/bg2</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:textColor">@color/txt</item>
+        <item name="colorControlActivated">@color/cyan</item>
+    </style>
+
+    <style name="Lbl">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/cyan</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:letterSpacing">0.04</item>
+    </style>
+
+    <style name="Lbl2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dim2</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="Hint">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11.5sp</item>
+        <item name="android:textColor">@color/dim3</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+    </style>
+
+    <style name="Fld">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/input_bg</item>
+        <item name="android:textColor">@color/txt</item>
+        <item name="android:textColorHint">@color/dim3</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:padding">13dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:inputType">textNoSuggestions</item>
+    </style>
+
+    <style name="Sep">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/line</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">18dp</item>
+    </style>
+
+    <!-- Bubble wali transparent screen -->
+    <style name="Theme.IeyeRis.Clear" parent="Theme.IeyeRis">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+</resources>

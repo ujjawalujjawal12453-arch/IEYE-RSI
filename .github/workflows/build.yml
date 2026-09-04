@@ -1,0 +1,92 @@
+name: Build APK
+
+on:
+  push:
+  workflow_dispatch:
+
+# Purani build chal rahi ho to cancel — warna do build ek saath
+# chalti hain aur galat wali ka APK download ho jata hai.
+concurrency:
+  group: ieyeris-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: android-actions/setup-android@v3
+
+      # Gradle cache — doosri baar se build 2-3 min tez
+      - uses: gradle/actions/setup-gradle@v4
+
+      - name: Build
+        run: |
+          gradle wrapper --gradle-version 8.7 --no-daemon
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      # ═══════════════════════════════════════════════════
+      #   ⚠️⚠️  YAHAN BUG THA — DO BAAR  ⚠️⚠️
+      #
+      #   Rename script ne "JARVIS.apk" -> "IEYE RIS.apk" kar
+      #   diya tha, SPACE ke saath. Shell me:
+      #
+      #        cp {} out/IEYE RIS.apk
+      #
+      #   ka matlab "out/IEYE" aur "RIS.apk" — DO alag cheezein.
+      #   Asli error tha:
+      #        cp: target 'RIS.apk': No such file or directory
+      #
+      #   APK BAN JAATI THI, par upload kabhi nahi hoti thi.
+      #   Isliye "Is build me APK nahi mili" aata tha.
+      #
+      #   Ab:
+      #     • naam me space nahi
+      #     • APK poore build folder me dhoondhi jaati hai
+      #     • na mile to build LAAL ho jayegi (chup nahi rahegi)
+      # ═══════════════════════════════════════════════════
+      - name: Collect APK
+        run: |
+          set -e
+          mkdir -p out
+
+          # kahin bhi ho — dhoondh lo
+          APK=$(find app/build -name "*.apk" -type f \
+                | grep -i release | head -1)
+          if [ -z "$APK" ]; then
+            APK=$(find . -name "*.apk" -type f | head -1)
+          fi
+
+          if [ -z "$APK" ]; then
+            echo "::error::Koi APK nahi bani"
+            echo "--- app/build/outputs me kya hai ---"
+            find app/build/outputs -type f 2>/dev/null | head -40
+            exit 1
+          fi
+
+          echo "APK mili: $APK"
+          cp "$APK" out/IEYERIS.apk
+
+          echo "--- out folder ---"
+          ls -lh out/
+          md5sum out/IEYERIS.apk
+
+          # aakhri jaanch — file sach me hai?
+          if [ ! -s out/IEYERIS.apk ]; then
+            echo "::error::out/IEYERIS.apk khali ya missing"
+            exit 1
+          fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: IEYERIS-APK
+          path: out/IEYERIS.apk
+          retention-days: 30
+          if-no-files-found: error
