@@ -1,0 +1,169 @@
+╔══════════════════════════════════════════════════════════╗
+║  👁  IEYE RIS  —  SAARI COMMAND                           ║
+║  INTELLIGENT EYES · RESPONSE · SYSTEM                    ║
+╚══════════════════════════════════════════════════════════╝
+
+Ye list BINA INTERNET ke bhi khulti hai.
+Bolne ka tarika apna rakh sakte ho — IEYE RIS
+samajh jata hai. Neeche sirf misaal hai.
+
+ 1. App kholo
+    bolo : "youtube kholo"
+    kaam : koi bhi app naam se
+
+ 2. App band karo
+    bolo : "youtube band karo"
+    kaam : chal raha app rok do
+
+ 3. Torch
+    bolo : "torch on karo"
+    kaam : flash chalu/band
+
+ 4. WiFi
+    bolo : "wifi on karo"
+    kaam : wifi setting
+
+ 5. Bluetooth
+    bolo : "bluetooth on karo"
+    kaam : bluetooth setting
+
+ 6. Volume
+    bolo : "volume badhao"
+    kaam : awaaz kam/zyada/full
+
+ 7. Brightness
+    bolo : "brightness kam karo"
+    kaam : screen ki roshni
+
+ 8. Call
+    bolo : "papa ko call karo"
+    kaam : contact se number
+
+ 9. SMS
+    bolo : "papa ko sms karo aa raha hoon"
+    kaam : message bhejo
+
+10. WhatsApp
+    bolo : "raju ko whatsapp karo hi"
+    kaam : whatsapp message
+
+11. YouTube search
+    bolo : "youtube pe gaana dhoondo"
+    kaam : video khojo
+
+12. Google
+    bolo : "google pe mausam dhoondo"
+    kaam : internet search
+
+13. Screenshot
+    bolo : "screenshot lo"
+    kaam : screen ki photo
+
+14. Battery
+    bolo : "battery batao"
+    kaam : kitni bachi hai
+
+15. Time / Date
+    bolo : "time batao"
+    kaam : abhi kya baja
+
+16. Alarm
+    bolo : "subah 7 baje alarm"
+    kaam : alarm laga do
+
+17. Timer
+    bolo : "10 minute ka timer"
+    kaam : timer chalu
+
+18. Reminder
+    bolo : "kal 5 baje meeting yaad dilana"
+    kaam : ek baar / roz
+
+19. Reminder list
+    bolo : "reminder dikhao"
+    kaam : sab reminder
+
+20. Note
+    bolo : "note doodh lena hai"
+    kaam : likh kar rakho
+
+21. Note padho
+    bolo : "notes dikhao"
+    kaam : sab note
+
+22. Gaana
+    bolo : "gaana chalao"
+    kaam : play/pause/agla
+
+23. Calculator
+    bolo : "45 guna 12 kitna"
+    kaam : hisaab
+
+24. Translate
+    bolo : "good morning hindi me"
+    kaam : anuvaad
+
+25. Study mode
+    bolo : "study mode"
+    kaam : teacher ban jata hai
+
+26. Coding mode
+    bolo : "coding mode"
+    kaam : code samjhata hai
+
+27. Normal mode
+    bolo : "normal mode"
+    kaam : wapas aam
+
+28. Wake up
+    bolo : "IEYE RIS wake up"
+    kaam : sab chalu
+
+29. Sleep
+    bolo : "IEYE RIS sleep"
+    kaam : standby
+
+30. Stop
+    bolo : "ruk jao"
+    kaam : kaam turant band
+
+31. Shutdown
+    bolo : "shutdown ho jao"
+    kaam : sab service band
+
+32. Status
+    bolo : "status batao"
+    kaam : poora haal
+
+33. Mic band
+    bolo : "mic band karo"
+    kaam : sunna band
+
+34. Chup raho
+    bolo : "ab kuch mat bolna"
+    kaam : sirf likha jawab
+
+35. Screen padho
+    bolo : "screen padho"
+    kaam : saamne kya hai
+
+36. Notification
+    bolo : "notification batao"
+    kaam : kya aaya
+
+37. Auto-reply
+    bolo : "auto reply on karo"
+    kaam : khud jawab
+
+38. Yaad rakho
+    bolo : "yaad rakho ghar ka number 123"
+    kaam : fact save
+
+39. Yaad karo
+    bolo : "mera naam kya hai"
+    kaam : fact wapas
+
+40. Back / Home
+    bolo : "peeche jao"
+    kaam : navigation
+

@@ -1,0 +1,46 @@
+👁 IEYE RIS — DIKKAT AUR HAL
+============================================
+
+Ye madad bina internet ke bhi milti hai.
+
+❓ 1. App khulti hai phir band ho jati hai
+   Settings me jaakar app ka data clear karo, phir dobara
+   setup karo. Ye Android ke keystore ki dikkat hoti hai.
+
+❓ 2. Awaaz nahi sun raha
+   1. Settings -> Apps -> IEYE RIS -> Permissions -> Mic ON
+   2. Play Store se 'Google' app update karo
+   3. Beech wala IRIS daba kar bolo
+
+❓ 3. Bolne ke baad kuch nahi hota
+   Internet check karo. AI ke liye net chahiye. Sirf torch,
+   volume, app kholna — ye bina net ke chalte hain.
+
+❓ 4. Poori baat khatam hone se pehle hi kaam shuru
+   Settings -> Nakhre -> 'Sabr' ya 'Bahut sabr' chuno.
+   Tab wo zyada der intezaar karega.
+
+❓ 5. Screen ke andar ka kaam nahi karta
+   Accessibility ON karni padegi:
+   Settings -> Accessibility -> IEYE RIS -> ON
+   Iske bina sirf app khol sakta hai, andar kuch nahi.
+
+❓ 6. Bubble nahi dikh raha
+   Settings -> Apps -> IEYE RIS -> 'Display over other apps' ON
+
+❓ 7. Reminder nahi bajta
+   Android 12+ me: Settings -> Apps -> IEYE RIS ->
+   'Alarms & reminders' ON karo.
+
+❓ 8. App khud band ho jati hai
+   Settings -> Battery -> IEYE RIS -> 'Unrestricted' karo.
+   Warna Android background me maar deta hai.
+
+❓ 9. Wake word kaam nahi karta
+   👂 wala switch ON karo. Aur dhyan rakho — battery zyada
+   khayega kyunki mic hamesha sunta rehta hai.
+
+❓ 10. Sab ruk gaya / kuch galat ho raha hai
+   Neeche laal 🛑 IEYE RIS STOP daba do. Sab turant ruk
+   jayega — agent, awaaz, mic.
+
